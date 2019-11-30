@@ -1,0 +1,66 @@
+.container {
+  margin: 20px;
+  & .search-bar {
+    display: flex;
+    flex-direction: row;
+    & .input-search {
+      padding: 10px;
+      flex: 2;
+    }
+    & .btn-search {
+      flex: 0.5;
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      outline: 0;
+    }
+  }
+  & .movie {
+      margin: 0;
+      padding: 0;
+    & a {
+      text-decoration: none;
+      color: #333;
+    & .movie-list-item {
+      list-style: none;
+      text-align: center;
+      border: 1px solid #f4f4f4;
+      padding: 15px 0;
+      & .movie-list-title {
+          font-size: 16px;
+          font-weight: bold;
+      }
+      & .movie-list-desc {
+          padding: 10px;
+          margin: 0;
+          height: 100px;
+          overflow: hidden;
+      }
+      & .movie-list-image {
+          & img {
+            width: 100%;
+          }
+      }
+      & .btn-view {
+          margin: 10px auto;
+          padding: 6px 20px;
+      }
+    }
+   }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+      max-width: 1350px;
+      & .movie {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      & a {
+        margin: 1%;
+        flex-basis: 23%;
+      }
+  }
+}

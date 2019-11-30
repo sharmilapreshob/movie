@@ -1,0 +1,19 @@
+.movie-details {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  & .movie-details-image {
+      flex: 1;
+      img {
+        width: 100%;
+      }
+  }
+  & .movie-details-info {
+    flex: 2;
+    margin-left: 20px;
+    & .movie-details-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
