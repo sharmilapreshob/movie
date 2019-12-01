@@ -9,6 +9,9 @@ body {
 *, *::before, *::after {
     box-sizing: border-box;
 }
+a {
+  text-decoration: none; 
+}
 input {
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -20,8 +23,10 @@ input {
   color: white;
   border-radius: 5px;
   border: none;
-  font-size: 14px;
+  font-size: 16px;
   display: block;
   text-decoration: none;
   text-align: center;
+  outline: 0;
+  cursor: pointer;
 }

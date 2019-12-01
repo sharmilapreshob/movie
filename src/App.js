@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './App.scss';
 import Movie from './components/movie/movie';
-import MovieDetails from './components/movie-details/movie-details';
 
 const apikey = '4cb1eeab94f45affe2536f2c684a5c9e';
 const url = 'https://api.themoviedb.org/3/search/movie?api_key=';
@@ -29,7 +27,7 @@ class App extends React.Component {
 
                 })
       .catch(error => console.log("Oops some problem!", error));
-      if (this.state.movieList.length == 0) {
+      if (this.state.movieList.length === 0) {
         this.setState({status: 'Enter a valid movie name'})
       }
       else {
@@ -44,13 +42,10 @@ class App extends React.Component {
 
   render () {
     const yoyo = this.state;
-    console.log(yoyo.movieList);
     let content;
-    if (yoyo.movieList.length != 0) {
+    if (yoyo.movieList.length !== 0) {
       content = yoyo.movieList.results.map(m =>
-          <Link to={`/moviedetails/${m.id}`}>
-            <Movie key={m.id} movie={m} />
-          </Link>
+          <Movie key={m.id} movie={m} />
       )
     }
     return (

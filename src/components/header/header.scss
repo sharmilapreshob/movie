@@ -1,0 +1,17 @@
+.header {
+  padding: 25px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  & .header-title {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  & .header-link {
+    margin-left: auto;
+    color: white;
+  }
+}

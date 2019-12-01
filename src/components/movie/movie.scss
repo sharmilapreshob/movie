@@ -1,0 +1,16 @@
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  & .btn-view {
+    flex: 1;
+    margin-right: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  & .btn-favourite {
+    padding: 10px 20px;
+    text-align: center;
+    flex: 1;
+  }
+}

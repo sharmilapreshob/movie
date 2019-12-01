@@ -2,14 +2,11 @@ import React from 'react';
 import './movie-details.scss';
 
 class MovieDetails extends React.Component{
-    constructor(props) {
-        super(props)
-        this.state = {
+        state = {
             isLoading: false,
             data: '',
             id: this.props.match.params.id
         }
-    }
     componentDidMount() {
         this.setState({ isLoading: true })
         fetch(` https://api.themoviedb.org/3/movie/${this.state.id}?api_key=4cb1eeab94f45affe2536f2c684a5c9e `)
@@ -24,7 +21,6 @@ class MovieDetails extends React.Component{
 
     render() {
       const movieinfo = this.state.data;
-      console.log(this.state.data);
         return (
         <>
           {
