@@ -1,0 +1,28 @@
+.fav-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px;
+  padding: 0;
+  & .fav-list-item {
+    margin: 1%;
+    flex-basis: 23%;
+    padding: 10px;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    & .fav-list-title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    & .fav-list-image {
+      max-height: 300px;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    & .btn-remove{
+      flex: 1;
+    }
+  }
+}

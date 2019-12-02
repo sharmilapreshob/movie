@@ -3,6 +3,7 @@
   & .search-bar {
     display: flex;
     flex-direction: row;
+    margin: 10px;
     & .input-search {
       padding: 10px;
       flex: 2;
@@ -23,9 +24,12 @@
       text-align: center;
       border: 1px solid #f4f4f4;
       padding: 15px 0 0 0;
+      border-radius: 5px;
       & .movie-list-title {
           font-size: 16px;
           font-weight: bold;
+          margin-bottom: 10px;
+          padding: 5px;
       }
       & .movie-list-desc {
           padding: 10px;
@@ -39,6 +43,9 @@
           }
       }
     }
+  }
+  .error-msg {
+    margin: 5px 10px;
   }
 }
 

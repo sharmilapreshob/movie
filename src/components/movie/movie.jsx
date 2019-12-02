@@ -4,10 +4,18 @@ import { Link } from 'react-router-dom';
 
 var favorites =  [];
 class Movie extends React.Component {
+  state = {
+    added: 'Add'
+  }
   favorites = () => {
-    const favId= this.props.movie.id;
-    if (favorites.indexOf(favId) === -1) {
-        favorites.push(favId);
+    this.setState({added: 'Added'});
+    const fav= {
+      favId: this.props.movie.id,
+      favTitle: this.props.movie.title,
+      favImage: this.props.movie.poster_path
+    };
+    if (favorites.indexOf(fav) === -1) {
+        favorites.push(fav);
         console.log(favorites);
         localStorage.setItem('favourites', JSON.stringify(favorites));
     } else {
@@ -26,7 +34,7 @@ class Movie extends React.Component {
           <div className="movie-list-desc">{overview}</div>
           <div className="btn-group">
           <Link to={`/moviedetails/${id}`} key={id} className="btn btn-view">View</Link>
-          <button className="btn btn-favourite" onClick={this.favorites}>Add</button>
+          <button className="btn btn-favourite" onClick={this.favorites}>{this.state.added}</button>
           </div>
         </li>
     )
